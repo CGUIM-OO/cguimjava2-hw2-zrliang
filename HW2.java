@@ -2,19 +2,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 /*
- * ID: TODO: please add student ID here
- * Name: TODO: please add student name here
+ * ID: TODO: please add student ID here (5 points)
+ * Name: TODO: please add student name here (5 points)
+ * Try to write some comments for your codes (methods, 15 points)
  */
 public class HW2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("input N(deck of cards):");
+		System.out.println("input N (deck of cards):");
 		String testn= sc.nextLine(); 
         
 		int nDeck=Integer.parseInt(testn);
 		Deck deck=new Deck(nDeck);
-		//TODO: please check your output, make sure that you print all cards on your screen
+		//TODO: please check your output, make sure that you print all cards on your screen (10 points)
 		deck.printDeck();
 		
 		if(isAllCardsCorrect(deck.getAllCards(),nDeck)){
@@ -64,7 +65,7 @@ public class HW2 {
  */
 class Deck{
 	private ArrayList<Card> cards;
-	//TODO: Please implement the constructor
+	//TODO: Please implement the constructor (30 points)
 	public Deck(int nDeck){
 		cards=new ArrayList<Card>();
 		//1 Deck have 52 cards, https://en.wikipedia.org/wiki/Poker
@@ -75,10 +76,10 @@ class Deck{
 		//Sample code end
 
 	}	
-	//TODO: Please implement the method to print all cards on screen
+	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
-		//please implement and reuse printCard method in Card class
+		//TODO: please implement and reuse printCard method in Card class (5 points)
 
 	}
 	public ArrayList<Card> getAllCards(){
@@ -95,7 +96,7 @@ class Card{
 		suit=s;
 		rank=r;
 	}	
-	//TODO: 1. Please implement the printCard method
+	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
 
