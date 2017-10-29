@@ -1,11 +1,11 @@
-package HW2_;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import test.Card;
 
-/**梁哲榕 B0544146
+
+/**璇璁� B0544146 梁哲榕
  * @author TODO: please add student ID and name here
  * Try to write some comments for your codes (methods, 15 points)
  */
@@ -29,8 +29,8 @@ public class HW2 {
 	}
 	/**
 	 * This method is used for checking your result, not a part of your HW2
-	 * @param allCards �������
-	 * @param nDeck 蝮賢��嗾����
+	 * @param allCards 嚙踝蕭嚙踝蕭�嚙踝�蕭嚙�
+	 * @param nDeck �鞈ｇ嚙踝蕭��嚙踝嚙踝蕭嚙�
 	 * @return
 	 */
 	private static boolean isAllCardsCorrect(ArrayList<Card> allCards,int nDeck){
