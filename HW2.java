@@ -1,8 +1,11 @@
+package HW2_;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-/**
+import test.Card;
+
+/**梁哲榕 B0544146
  * @author TODO: please add student ID and name here
  * Try to write some comments for your codes (methods, 15 points)
  */
@@ -26,8 +29,8 @@ public class HW2 {
 	}
 	/**
 	 * This method is used for checking your result, not a part of your HW2
-	 * @param allCards 所有的牌
-	 * @param nDeck 總共有幾副牌
+	 * @param allCards �������
+	 * @param nDeck 蝮賢��嗾����
 	 * @return
 	 */
 	private static boolean isAllCardsCorrect(ArrayList<Card> allCards,int nDeck){
@@ -77,14 +80,24 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
-
+		for(int n=nDeck; n>0;n--) {
+			   for(int rank=1;rank<=13;rank++) {
+				   for(int suit=1;suit<=4; suit++) {
+					   Card card =new Card(suit,rank);
+					   cards.add(card);
+				   }
+			   
+			}
+			
+		}
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-
-	}
+		 for(int n=0;n<cards.size();n++) {
+				cards.get(n).printCard();
+	}}
 	public ArrayList<Card> getAllCards(){
 		return cards;
 	}
@@ -106,7 +119,10 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-
+		String rankarray[]= {"Ace","Two","Three","FOUR","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King"};
+		String suitarray[]= {"Clubs","Diamonds","Hearts","Spands"};
+		System.out.println(suitarray[suit-1]+""+rankarray[rank-1]);
+		
 	}
 	public int getSuit(){
 		return suit;
