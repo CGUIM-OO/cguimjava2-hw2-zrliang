@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 
-/**璇璁� B0544146 梁哲榕
+/**B0544146 梁哲榕
  * @author TODO: please add student ID and name here
  * Try to write some comments for your codes (methods, 15 points)
  */
@@ -74,22 +74,26 @@ class Deck{
 	//TODO: Please implement the constructor (30 points)
 	public Deck(int nDeck){
 		cards=new ArrayList<Card>();
-		//1 Deck have 52 cards, https://en.wikipedia.org/wiki/Poker
-		//Hint: Use new Card(x,y) and 3 for loops to add card into deck
-		//Sample code start
-		//Card card=new Card(1,1); ->means new card as clubs ace
-		//cards.add(card);
-		//Sample code end
-		for(int n=nDeck; n>0;n--) {
-			   for(int rank=1;rank<=13;rank++) {
-				   for(int suit=1;suit<=4; suit++) {
+	
+		for(int n=nDeck; n>0;n--) 
+			    for(int suit=1;suit<=4; suit++) {
+					   for(int rank=1;rank<=13;rank++) {
 					   Card card =new Card(suit,rank);
 					   cards.add(card);
+					    // first, print the same suit 1 to 13
+					    // second,print all the suits
+					   
+						//1 Deck have 52 cards, https://en.wikipedia.org/wiki/Poker
+						//Hint: Use new Card(x,y) and 3 for loops to add card into deck
+						//Sample code start
+						//Card card=new Card(1,1); ->means new card as clubs ace
+						//cards.add(card);
+						//Sample code end
 				   }
 			   
 			}
 			
-		}
+		
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
 	public void printDeck(){
@@ -97,6 +101,7 @@ class Deck{
 		//TODO: please implement and reuse printCard method in Card class (5 points)
 		 for(int n=0;n<cards.size();n++) {
 				cards.get(n).printCard();
+				// print the number of deck
 	}}
 	public ArrayList<Card> getAllCards(){
 		return cards;
@@ -119,9 +124,12 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-		String rankarray[]= {"Ace","Two","Three","FOUR","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King"};
 		String suitarray[]= {"Clubs","Diamonds","Hearts","Spands"};
+		String rankarray[]= {"Ace","Two","Three","FOUR","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King"};
 		System.out.println(suitarray[suit-1]+""+rankarray[rank-1]);
+		// define suit 1=clubs, 2=Diamonds, 3=Hearts, 4=Spades
+	    //  transfer rank from number to word 
+		//print all the cards
 		
 	}
 	public int getSuit(){
